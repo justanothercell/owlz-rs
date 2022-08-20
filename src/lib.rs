@@ -1,3 +1,22 @@
+//! # Owlz
+//!
+//! `owlz` is a crate for creating random owl ascii emojis.
+//! # Example
+//!
+//! ```
+//! println!("{}", Owl::default());
+//! println!("{}", Owl::random());
+//! println!("{}",
+//!     Owl {
+//!         beak: Beak::Happy,
+//!         eyes: Eyes::Happy,
+//!         head: Head::Curly,
+//!         wing_shape: WingShape::None,
+//!         wings: Wings::Outward
+//!     }
+//! );
+//! ```
+
 mod owl;
 
 pub use owl::*;

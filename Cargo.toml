@@ -1,6 +1,6 @@
 [package]
 name = "owlz"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["DragonFighter603 <kuhn.christopher.a@gmail.com>"]
 license = "MIT OR Apache-2.0"
@@ -8,7 +8,7 @@ readme = "README.md"
 keywords = ["owls", "emoji"]
 repository = "https://github.com/DragonFIghter603/owlz-rs"
 description = """
-"Owlz" ascii emoojis, created deliberately or randomly.
+"Owlz" ascii emoojis, created randomly or by design.
 """
 
 [dependencies]

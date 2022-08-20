@@ -4,7 +4,7 @@ use rand_derive2::RandGen;
 
 /// Create an Owl
 ///
-/// # Examples
+/// # Example
 ///
 /// ```
 /// println!("{}", Owl::default());

@@ -17,7 +17,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-owlz = "0.1.0"
+owlz = "0.1.1"
 rand = "0.8.5"
 rand_derive2 = "0.1.17"
 enum-assoc = "0.3.4"
@@ -25,7 +25,7 @@ enum-assoc = "0.3.4"
 
 Example:
 
-```rs
+```rust
 use owlz::Owl;
 
 fn main() {
@@ -49,3 +49,11 @@ fn main() {
 - [ ] tooling for creation
 - [ ] owl descriptors
 - [ ] see if any libs can be removed to reduce dependencies
+
+##### ✨  `<\*o*/>`
+
+## Changes
+- 0.1.0
+  - initial publish
+- 0.1.1
+  - improve readme + documentation
