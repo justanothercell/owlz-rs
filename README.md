@@ -18,9 +18,6 @@ Add this to your `Cargo.toml`:
 ```toml
 [dependencies]
 owlz = "0.1.1"
-rand = "0.8.5"
-rand_derive2 = "0.1.17"
-enum-assoc = "0.3.4"
 ```
 
 Example:
