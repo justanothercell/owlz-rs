@@ -1,6 +1,6 @@
-use std::fmt::{Display, Formatter};
 use enum_assoc::Assoc;
 use rand_derive2::RandGen;
+use std::fmt::{Display, Formatter};
 
 /// Create an Owl
 ///
@@ -21,40 +21,44 @@ use rand_derive2::RandGen;
 /// ```
 #[derive(RandGen)]
 pub struct Owl {
-    beak: Beak,
-    eyes: Eyes,
-    head: Head,
-    wing_shape: WingShape,
-    wings: Wings
+    pub beak: Beak,
+    pub eyes: Eyes,
+    pub head: Head,
+    pub wing_shape: WingShape,
+    pub wings: Wings,
 }
 
 impl Owl {
-    pub fn default() -> Self {
+    pub fn random() -> Self {
+        Owl::generate_random()
+    }
+}
+
+impl Default for Owl {
+    fn default() -> Self {
         Owl {
             beak: Beak::Beak,
             eyes: Eyes::Happy,
             head: Head::Round,
             wing_shape: WingShape::None,
-            wings: Wings::Outward
+            wings: Wings::Outward,
         }
-    }
-
-    pub fn random() -> Self{
-        Owl::generate_random()
     }
 }
 
 impl Display for Owl {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{}{}{}{}{}{}{}{}{}",
+        write!(
+            f,
+            "{}{}{}{}{}{}{}{}{}",
             self.wings.shape().0,
-              self.wing_shape.shape().0,
-                self.head.shape().0,
-                  self.eyes.shape().0,
-                    self.beak.shape(),
-                  self.eyes.shape().1,
-                self.head.shape().1,
-              self.wing_shape.shape().1,
+            self.wing_shape.shape().0,
+            self.head.shape().0,
+            self.eyes.shape().0,
+            self.beak.shape(),
+            self.eyes.shape().1,
+            self.head.shape().1,
+            self.wing_shape.shape().1,
             self.wings.shape().1
         )
     }
@@ -72,7 +76,7 @@ pub enum Head {
     #[assoc(shape = ("(", ")"))]
     Round,
     #[assoc(shape = ("|", "|"))]
-    Pipe
+    Pipe,
 }
 
 #[derive(RandGen, Assoc)]
@@ -91,7 +95,7 @@ pub enum Eyes {
     #[assoc(shape = ("`", "`"))]
     TiltedLeft,
     #[assoc(shape = ("´", "´"))]
-    TiltedRight
+    TiltedRight,
 }
 
 #[derive(RandGen, Assoc)]
@@ -120,7 +124,7 @@ pub enum Beak {
     #[assoc(shape = "+")]
     Plus,
     #[assoc(shape = "-")]
-    Minus
+    Minus,
 }
 
 #[derive(RandGen, Assoc)]
@@ -137,7 +141,7 @@ pub enum WingShape {
     #[assoc(shape = ("|", "|"))]
     Bang,
     #[assoc(shape = (":", ":"))]
-    Colon
+    Colon,
 }
 
 #[derive(RandGen, Assoc)]
@@ -148,5 +152,5 @@ pub enum Wings {
     #[assoc(shape = (">", "<"))]
     Outward,
     #[assoc(shape = ("<", ">"))]
-    Inward
+    Inward,
 }
