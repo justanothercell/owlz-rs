@@ -17,7 +17,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-owlz = "0.1.1"
+owlz = "0.1.2"
 ```
 
 Example:
